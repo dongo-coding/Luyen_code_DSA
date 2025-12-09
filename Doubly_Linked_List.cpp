@@ -21,7 +21,7 @@ dList *createNode (int x){
     
 }
 
-dList *addHead (dList *l, int x){
+dList *addFirst (dList *l, int x){
     Node *temp = new Node;
     temp->data=x;
     temp->pre=NULL;
@@ -63,7 +63,7 @@ int main ()
     cin>>n;
     dList *l = createNode(1);
     for(int i=2;i<=n;i++){
-        l=addHead(l,i);
+        l=addFirst(l,i);
         l=addLast(l,i);
     }
     printList(l);
